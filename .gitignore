@@ -60,3 +60,4 @@ typings/
 .env.*.local
 # next.js build output
 .next
+/.idea/*
