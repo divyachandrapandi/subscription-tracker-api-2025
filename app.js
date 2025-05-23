@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 
 import { PORT, DB_URI } from './config/env.js';
 
@@ -15,13 +16,13 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/subscriptions', subscriptionRouter);
 
 app.get('/', (req, res) =>{
-    console.log("hello");
     res.send("Welcome here")
 })
 
+// Connect to local MongoDB
 
 app.listen(PORT, async () => {
-    console.log("Subscription tracker API is running on port 3000");
+    console.log("Subscription tracker API is running on port 5500");
     await connectToDatabase();
 });
 
